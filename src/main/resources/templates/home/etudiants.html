@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+
+
+        <link rel="stylesheet" href="./css/bootstrap.min.css" >
+                <link rel="stylesheet" href="main.css" >
+                
+</head>
+
+<body>
+
+<img th:src="@{images/centrale.png}" widht="20%" />
+
+	<h1 align="center">Liste des Etudiants de la formation </h1>
+Pour Ajouter un Etudiant Cliquer ici
+	
+	<a th:href="@{/add}" class="btn btn-outline-success" >Cliquer</a>
+	<br><br>
+		<table  border="1" class="table table-bordered">
+			<thead >
+				<tr>
+					<th scope="col">Nom</th>
+					<th scope="col">Age</th>
+					<th scope="col">Email</th>
+					<th scope="col">Adresse</th>
+					<th scope="col">Tel</th>
+				</tr>
+					</thead >
+					  <tbody>
+				<tr th:each="student:${students}">
+				<td th:text="${student.nom}"></td>
+				<td th:text="${student.age}"></td>
+				<td th:text="${student.email}"></td>
+				<td th:text="${student.adresse}"></td>
+				<td th:text="${student.tel}"></td>
+			
+</tr>
+  </tbody>
+		</table>
+
+
+</body>
+
+
+
+
+</html>

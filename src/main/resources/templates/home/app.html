@@ -1,0 +1,28 @@
+<head>
+<title>
+First Page
+</title>
+
+</head>
+
+<body>
+
+<h1 align="center"> My First Page</h1>
+<h2 th:text="${name}">votre nom </h2>
+<h2 th:text="${universty}">my tel </h2>
+<h2 th:text="${email}">my tel </h2>
+<h2 th:text="${tel}">my tel </h2>
+
+<h4 align="center">Liste des moduels</h4>
+
+<ul>
+<li th:each="c : ${tab}" th:text="${c}"></li>
+
+
+        
+</ul>
+
+</body>
+
+
+</html>
