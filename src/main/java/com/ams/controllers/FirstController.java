@@ -98,13 +98,26 @@ public class FirstController {
 	}
 	
 	@GetMapping("/delete/{email}")
-	@ResponseBody
+	//@ResponseBody
 	public String deleteetudiants(@PathVariable("email")String mail)
 	
 	{
-
-		
-		return "email"+mail;
+    Etudiant temp=null;
+    
+    for (Etudiant e: students)
+    	
+    {
+    	
+    	if (e.getEmail().equals(mail))
+    	
+    {
+    		temp=e;
+    }
+    }
+  
+    students.remove(temp);
+		//return "email"+mail;
+    return "redirect:../list";
 	}
 	
 	
