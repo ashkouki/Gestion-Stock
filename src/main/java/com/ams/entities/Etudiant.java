@@ -39,6 +39,14 @@ public class Etudiant {
 		this.adresse = adresse;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Etudiant [nom=" + nom + ", age=" + age + ", email=" + email + ", tel=" + tel + ", adresse=" + adresse
+				+ "]";
+	}
+
 	public Etudiant(String nom, int age, String email, String tel, String adresse) {
 		this.nom = nom;
 		this.age = age;
